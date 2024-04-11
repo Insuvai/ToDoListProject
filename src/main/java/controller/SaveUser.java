@@ -25,12 +25,12 @@ public class SaveUser extends HttpServlet {
 		String name=req.getParameter("name");
 		String email=req.getParameter("email");
 		String password=req.getParameter("password");
-		Long contact=Long.parseLong(req.getParameter("contact"));
+		String contact=req.getParameter("contact");
 		
 		Part imagePart=req.getPart("image");
 		byte[] image=imagePart.getInputStream().readAllBytes();
 		
-		    User user = new User(id, password, password, contact, password, image);
+		    User user = new User(id,name,email,contact,image,password);
 		Dao dao=new Dao();
 		
 		try {

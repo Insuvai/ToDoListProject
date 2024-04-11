@@ -5,7 +5,7 @@ public class User {
 	private int userid;
 	private String username;
 	private String useremail;
-	private long usercontact;
+	private String usercontact;
 	private String userpassword;
 	private byte[] userimage;
 	
@@ -13,8 +13,8 @@ public User() {
 		super();
 	}
 	
-	public User(int userid, String username, String useremail, long usercontact, String userpassword,
-			byte[] userimage) {
+	public User(int userid, String username, String useremail, String usercontact,byte[] userimage, String userpassword
+			) {
 		super();
 		this.userid = userid;
 		this.username = username;
@@ -42,10 +42,10 @@ public User() {
 	public void setUseremail(String useremail) {
 		this.useremail = useremail;
 	}
-	public long getUsercontact() {
+	public String getUsercontact() {
 		return usercontact;
 	}
-	public void setUsercontact(long usercontact) {
+	public void setUsercontact(String usercontact) {
 		this.usercontact = usercontact;
 	}
 	public String getUserpassword() {
@@ -60,7 +60,4 @@ public User() {
 	public void setUserimage(byte[] userimage) {
 		this.userimage = userimage;
 	}
-	
-	
-	
 }
